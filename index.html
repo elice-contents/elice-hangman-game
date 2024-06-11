@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://font.elice.io/css?family=Elice+DX+Neolli"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Elice Hangman</title>
+  </head>
+  <body>
+    <main>
+      <div class="canvas">
+        <img
+          class="invisible"
+          id="gallows"
+          src="assets/gallows.png"
+          alt="gallows"
+        />
+        <img class="invisible" id="head" src="assets/head.png" alt="head" />
+        <img class="invisible" id="body" src="assets/body.png" alt="body" />
+        <img
+          class="invisible"
+          id="leftArm"
+          src="assets/left-arm.png"
+          alt="left-arm"
+        />
+        <img
+          class="invisible"
+          id="rightArm"
+          src="assets/right-arm.png"
+          alt="right-arm"
+        />
+        <img
+          class="invisible"
+          id="leftLeg"
+          src="assets/left-leg.png"
+          alt="left-leg"
+        />
+        <img
+          class="invisible"
+          id="rightLeg"
+          src="assets/right-leg.png"
+          alt="right-leg"
+        />
+      </div>
+
+      <div class="game-area">
+        <section class="header">
+          <span class="header__component"
+            >남은 시도 횟수: <span id="tries" class="strong">7</span></span
+          >
+          <span class="header__component"
+            >남은 시간: <span id="timer" class="strong">60</span></span
+          >
+        </section>
+        <section class="word">
+          <div class="word__problem invisible" id="problemText"></div>
+          <div class="word__answer invisible" id="answerText"></div>
+          <div class="word__text flex-visible" id="startText">
+            <span class="strong">엘리스 행맨 게임</span>
+            <button class="strong button button-blue" id="startButton">
+              시작하기
+            </button>
+          </div>
+          <div class="word__text invisible" id="failText">
+            <span class="strong">실패했습니다 😢</span>
+            <button class="strong button" id="restartButton">다시 시작</button>
+          </div>
+          <div class="word__text invisible" id="successText">
+            <span class="strong">성공했습니다! 😀</span>
+            <button class="strong button button-red reset-button">
+              처음부터 다시하기
+            </button>
+          </div>
+          <div class="word__text invisible" id="overText">
+            <span class="strong">기회를 모두 사용했습니다</span>
+            <button class="strong button button-red reset-button">
+              처음부터 다시하기
+            </button>
+          </div>
+        </section>
+        <section class="alphabets">
+          <button class="button" id="buttonA">A</button>
+          <button class="button" id="buttonB">B</button>
+          <button class="button" id="buttonC">C</button>
+          <button class="button" id="buttonD">D</button>
+          <button class="button" id="buttonE">E</button>
+          <button class="button" id="buttonF">F</button>
+          <button class="button" id="buttonG">G</button>
+          <button class="button" id="buttonH">H</button>
+          <button class="button" id="buttonI">I</button>
+          <button class="button" id="buttonJ">J</button>
+          <button class="button" id="buttonK">K</button>
+          <button class="button" id="buttonL">L</button>
+          <button class="button" id="buttonM">M</button>
+          <button class="button" id="buttonN">N</button>
+          <button class="button" id="buttonO">O</button>
+          <button class="button" id="buttonP">P</button>
+          <button class="button" id="buttonQ">Q</button>
+          <button class="button" id="buttonR">R</button>
+          <button class="button" id="buttonS">S</button>
+          <button class="button" id="buttonT">T</button>
+          <button class="button" id="buttonU">U</button>
+          <button class="button" id="buttonV">V</button>
+          <button class="button" id="buttonW">W</button>
+          <button class="button" id="buttonX">X</button>
+          <button class="button" id="buttonY">Y</button>
+          <button class="button" id="buttonZ">Z</button>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="src/index.js"></script>
+  </body>
+</html>

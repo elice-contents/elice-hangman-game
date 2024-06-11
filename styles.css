@@ -1,0 +1,239 @@
+@import url("https://font.elice.io/css?family=Elice+DX+Neolli");
+
+html,
+body {
+  font-family: "Elice DX Neolli", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  height: 100vh;
+
+  margin: 0;
+
+  background-color: black;
+}
+
+main {
+  width: 800px;
+  height: 600px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  border-radius: 70px;
+
+  overflow: hidden;
+}
+
+.strong {
+  font-weight: bold;
+}
+
+.invisible {
+  display: none;
+}
+
+.flex-visible {
+  display: flex;
+}
+
+.button-invisible {
+  opacity: 0;
+}
+
+.button-invisible:is(:hover, :focus) {
+  opacity: 0% !important;
+}
+
+.button-invisible:active {
+  opacity: 0% !important;
+}
+
+.button {
+  background-color: #c6b3ff;
+  border: none;
+
+  font-family: "Elice DX Neolli", sans-serif;
+
+  transition: opacity 0.1s ease-in-out;
+}
+
+.button:is(:hover, :focus) {
+  opacity: 80%;
+  outline: none;
+}
+
+.button:active {
+  opacity: 60%;
+}
+
+.button-blue {
+  background-color: #00bce2;
+}
+
+.button-red {
+  background-color: #ff6c80;
+}
+
+.canvas {
+  position: relative;
+
+  background-color: #c6b3ff;
+}
+
+.canvas > img {
+  position: absolute;
+}
+
+#gallows {
+  width: 80%;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#head {
+  width: 25%;
+
+  top: 13%;
+  left: 50%;
+}
+
+#body {
+  width: 25%;
+
+  top: 37.5%;
+  left: 50%;
+}
+
+#leftArm {
+  width: 15%;
+
+  top: 40%;
+  left: 40%;
+}
+
+#rightArm {
+  width: 15%;
+
+  top: 40%;
+  left: 70%;
+}
+
+#leftLeg {
+  height: 12%;
+
+  top: 55%;
+  left: 54%;
+}
+
+#rightLeg {
+  height: 12%;
+
+  top: 55%;
+  left: 64%;
+}
+
+.game-area {
+  padding: 5%;
+
+  background-color: #8842ff;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.header__component {
+  text-align: center;
+
+  background-color: #c6b3ff;
+
+  padding: 0.6em 0.7em;
+  border-radius: 0.5em;
+}
+
+.word {
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.word__text {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6em;
+}
+
+.word__text > span {
+  font-size: 2.5em;
+  text-align: center;
+  word-break: keep-all;
+  line-height: 1.3;
+}
+
+.word__text > button {
+  font-size: 1.2em;
+  font-weight: 500;
+
+  padding: 0.7em 0.8em;
+  border-radius: 0.5em;
+
+  cursor: pointer;
+}
+
+.word__problem {
+  font-size: 2.4em;
+  font-weight: 300;
+
+  text-align: center;
+  letter-spacing: 0.2em;
+
+  word-break: keep-all;
+}
+
+.word__answer {
+  font-size: 1em;
+  text-align: center;
+}
+
+.alphabets {
+  width: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  gap: 0.12em;
+}
+
+.alphabets > button {
+  width: 12%;
+  aspect-ratio: 1 / 1;
+
+  border-radius: 0.3em;
+
+  font-size: 1.5em;
+  font-weight: 300;
+
+  cursor: pointer;
+}
